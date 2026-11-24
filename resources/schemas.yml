@@ -1,0 +1,14 @@
+resources:
+  schemas:
+    ingestion:
+      name: ingestion
+      catalog_name: ${var.catalog}
+      comment: Ingestion layer - raw data as received from source systems
+    intermediate:
+      name: intermediate
+      catalog_name: ${var.catalog}
+      comment: Intermediate layer - cleansed, conformed, deduplicated data
+    consumption:
+      name: consumption
+      catalog_name: ${var.catalog}
+      comment: Consumption layer - business-ready aggregates for reporting
