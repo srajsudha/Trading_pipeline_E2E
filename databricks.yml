@@ -30,7 +30,7 @@ targets:
     workspace:
       host: https://dbc-1c079e81-2c76.cloud.databricks.com
     variables:
-      catalog: trading_pipeline_e2e
+      catalog: trading_pipeline_e2e_dev
       schema: ${workspace.current_user.short_name}
   prod:
     mode: production
@@ -39,7 +39,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/sudhanshuraj@deloitte.co.uk to make sure we only have a single copy.
       root_path: /Workspace/Users/sudhanshuraj@deloitte.co.uk/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: trading_pipeline_e2e
+      catalog: trading_pipeline_e2e_prod
       schema: prod
     permissions:
       - user_name: sudhanshuraj@deloitte.co.uk
